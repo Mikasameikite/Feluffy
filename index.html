@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feluffy - Playful Books You Interact With</title>
+    <meta name="description"
+        content="Feluffy creates playful books you don't just read - you interact with. Coloring books, educational books, and arcade books.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header" id="main-header">
+        <div class="header-left">
+            <a href="#" class="header-logo">Feluffy</a>
+        </div>
+        <div class="header-center">
+            <div class="search-bar" id="search-bar">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9e8e7e"
+                    stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Search books by title or tag..." id="search-input">
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="whatis-micro" id="whatis-micro">
+                <p>Feluffy creates playful books you don't just read — <strong>you interact with.</strong></p>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HOME VIEW ===== -->
+    <div id="home-view">
+        <main class="main-content" id="main-content">
+            <!-- Left Section - Books -->
+            <section class="books-section" id="books-section">
+                <!-- Category Tabs -->
+                <div class="category-tabs" id="category-tabs">
+                    <div class="category-tab active" data-tag="all" id="tab-all">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <rect x="6" y="6" width="11" height="11" rx="2" fill="#c4a47a" />
+                                <rect x="23" y="6" width="11" height="11" rx="2" fill="#c4a47a" />
+                                <rect x="6" y="23" width="11" height="11" rx="2" fill="#c4a47a" />
+                                <rect x="23" y="23" width="11" height="11" rx="2" fill="#c4a47a" />
+                            </svg>
+                        </div>
+                        <span>All</span>
+                    </div>
+                    <div class="category-tab" data-tag="new" id="tab-new">
+                        <div class="tab-icon new-tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <polygon points="20,3 24,15 37,15 27,22 30,35 20,27 10,35 13,22 3,15 16,15"
+                                    fill="#e8a85c" stroke="#d4943e" stroke-width="1" />
+                            </svg>
+                            <span class="new-badge">NEW</span>
+                        </div>
+                        <span>New</span>
+                    </div>
+                    <div class="category-tab" data-tag="bestsellers" id="tab-bestsellers">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <path d="M20 5c0 0-9 7-9 17s5 13 9 13c4 0 9-3 9-13S20 5 20 5z" fill="#e85d5d" />
+                                <path d="M20 18c0 0-4 3-4 8s2 7 4 7c2 0 4-2 4-7S20 18 20 18z" fill="#f0a030" />
+                            </svg>
+                        </div>
+                        <span>Bestsellers</span>
+                    </div>
+                    <div class="category-tab" data-tag="cozy" id="tab-cozy">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <path d="M10 16h14v12a4 4 0 01-4 4H14a4 4 0 01-4-4V16z" fill="#c4a47a" />
+                                <path d="M24 18h3a3 3 0 010 6h-3" fill="none" stroke="#c4a47a" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                                <path d="M14 12c0-2 2-3 2-5M18 12c0-2 2-3 2-5" fill="none" stroke="#c4a47a"
+                                    stroke-width="1.5" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span>Cozy</span>
+                    </div>
+                    <div class="category-tab" data-tag="animals" id="tab-animals">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <ellipse cx="20" cy="25" rx="7" ry="6" fill="#c4a47a" />
+                                <circle cx="12" cy="14" r="3.5" fill="#c4a47a" />
+                                <circle cx="28" cy="14" r="3.5" fill="#c4a47a" />
+                                <circle cx="9" cy="23" r="2.5" fill="#c4a47a" />
+                                <circle cx="31" cy="23" r="2.5" fill="#c4a47a" />
+                            </svg>
+                        </div>
+                        <span>Animals</span>
+                    </div>
+                    <div class="category-tab" data-tag="holidays" id="tab-holidays">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <polygon points="20,4 32,30 8,30" fill="#6baa6b" />
+                                <rect x="17" y="30" width="6" height="5" rx="1" fill="#8b6b4e" />
+                                <circle cx="16" cy="20" r="2" fill="#e85d5d" />
+                                <circle cx="24" cy="24" r="2" fill="#f0a030" />
+                                <polygon points="20,1 21.5,5 25,5 22,7.5 23,11 20,8.5 17,11 18,7.5 15,5 18.5,5"
+                                    fill="#f0a030" />
+                            </svg>
+                        </div>
+                        <span>Holidays</span>
+                    </div>
+                    <div class="category-tab" data-tag="arcade" id="tab-arcade">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <rect x="6" y="13" width="28" height="14" rx="7" fill="#9b6b9b" />
+                                <circle cx="14" cy="20" r="1.5" fill="white" />
+                                <line x1="14" y1="17" x2="14" y2="23" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <line x1="11" y1="20" x2="17" y2="20" stroke="white" stroke-width="2"
+                                    stroke-linecap="round" />
+                                <circle cx="26" cy="18" r="2" fill="#f0c060" />
+                                <circle cx="30" cy="22" r="2" fill="#e87070" />
+                            </svg>
+                        </div>
+                        <span>Arcade</span>
+                    </div>
+                    <div class="category-tab" data-tag="interactive" id="tab-interactive">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <path d="M18 8 L18 22 M14 11 L14 22 M22 11 L22 22 M10 16 L10 22 M26 16 L26 22"
+                                    stroke="#c4a47a" stroke-width="3" stroke-linecap="round" />
+                                <path d="M8 24c0 5 5 9 12 9s12-4 12-9" fill="none" stroke="#c4a47a" stroke-width="2.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <span>Interactive</span>
+                    </div>
+                    <div class="category-tab" data-tag="gamebook" id="tab-gamebook">
+                        <div class="tab-icon">
+                            <svg width="24" height="24" viewBox="0 0 40 40">
+                                <rect x="10" y="6" width="20" height="28" rx="3" fill="#d4c4b0" stroke="#bfaf9f"
+                                    stroke-width="1" />
+                                <path d="M20 18 L16 24 L18 24 L18 28" stroke="#c4a47a" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M20 18 L24 24 L22 24 L22 28" stroke="#c4a47a" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="14" y="10" width="12" height="3" rx="1" fill="#bfaf9f" />
+                            </svg>
+                        </div>
+                        <span>Gamebook</span>
+                    </div>
+                </div>
+
+                <!-- Books Grid — rendered by app.js -->
+                <div class="books-grid" id="books-grid"></div>
+            </section>
+
+            <!-- Right Section - Featured / Spotlight -->
+            <aside class="spotlight-panel" id="spotlight-panel">
+                <div class="spotlight-header">
+                    <h2>✨ Featured Book</h2>
+                </div>
+
+                <div class="spotlight-book" id="spotlight-book-container">
+                    <!-- rendered by app.js -->
+                </div>
+
+                <div class="spotlight-hook">
+                    <p>"Turn pages. Make choices. Win or lose."</p>
+                </div>
+
+                <div class="spotlight-buttons">
+                    <a href="https://amazon.com" class="btn-amazon" id="btn-amazon" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M.045 18.02c.07-.116.36-.172.53-.127.19.05.37.116.55.2.52.25 1.01.49 1.55.68a14.6 14.6 0 004.65 1.13c3.15.28 6.15-.46 8.95-2.08.12-.07.25-.15.38-.2.17-.07.3.02.33.2.03.15-.02.3-.13.42-.7.75-1.55 1.35-2.47 1.84a14.4 14.4 0 01-8.3 1.65c-1.7-.2-3.33-.67-4.85-1.42-.38-.18-.73-.4-1.08-.62-.1-.06-.17-.13-.14-.23z" />
+                            <path
+                                d="M6.09 16.5c.13-.2.34-.18.52-.1.64.3 1.3.53 2 .7 2.18.53 4.3.4 6.35-.47.22-.1.42-.22.64-.3.2-.07.34.04.3.26-.03.12-.1.24-.2.33a8.86 8.86 0 01-4.43 2.14c-1.46.2-2.87.05-4.22-.53-.3-.13-.58-.3-.85-.48-.07-.05-.14-.12-.1-.23l-.01.68z" />
+                        </svg>
+                        Amazon
+                    </a>
+                    <a href="https://ko-fi.com" class="btn-kofi" id="btn-kofi" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.88 8.4c-.04-.62-.2-1.2-.46-1.74-.56-1.18-1.5-1.88-2.72-2.22-.6-.18-1.22-.2-1.84-.16-.22.02-.43.04-.65.08h-.48c-.07-.02-.2-.04-.3-.07H6.16c-.14 0-.28.02-.42.05-1.08.14-1.9.7-2.46 1.62-.38.63-.56 1.33-.6 2.07-.03.57.03 1.14.1 1.7.2 1.48.68 2.86 1.42 4.14.58 1 1.32 1.86 2.22 2.58.56.45 1.17.8 1.84 1.06.3.12.6.2.92.25l.18.03h5.1c.2-.03.4-.05.58-.1 1.16-.27 2.04-.94 2.68-1.96.23-.37.42-.76.57-1.17l.03-.07c.24.02.46.05.7.05.56 0 1.1-.12 1.62-.36 1.06-.5 1.72-1.32 2-2.46.16-.65.2-1.3.12-1.97z" />
+                        </svg>
+                        Ko-fi
+                    </a>
+                </div>
+
+                <!-- Category Explainer -->
+                <div class="category-explainer" id="category-explainer">
+                    <div class="explainer-item">
+                        <span class="explainer-icon">🎨</span>
+                        <div>
+                            <strong>Coloring Books</strong>
+                            <p>Relax and bring pages to life</p>
+                        </div>
+                    </div>
+                    <div class="explainer-item">
+                        <span class="explainer-icon">🧠</span>
+                        <div>
+                            <strong>Educational</strong>
+                            <p>Learn through playful design</p>
+                        </div>
+                    </div>
+                    <div class="explainer-item">
+                        <span class="explainer-icon">🕹️</span>
+                        <div>
+                            <strong>Arcade Books</strong>
+                            <p>Make choices, flip pages, win or fail</p>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+
+        <!-- Social Proof -->
+        <section class="social-proof" id="social-proof">
+            <div class="proof-container">
+                <div class="proof-stat">
+                    <span class="proof-number">1,000+</span>
+                    <span class="proof-label">Loved by</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-quote">
+                    <span>"Perfect for relaxing evenings"</span>
+                </div>
+                <div class="proof-divider"></div>
+                <div class="proof-quote">
+                    <span>"Surprisingly addictive"</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Drops -->
+        <section class="new-drops" id="new-drops">
+            <div class="section-container">
+                <div class="section-header-row">
+                    <h2>🔥 New Drops</h2>
+                </div>
+                <div class="drops-grid" id="drops-grid">
+                    <!-- rendered by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Sample -->
+        <section class="free-sample" id="free-sample">
+            <div class="section-container">
+                <div class="sample-content">
+                    <div class="sample-text">
+                        <h2>📖 Try Before You Buy</h2>
+                        <p>Curious about our books? Flip through sample pages and see if you can resist the rest.</p>
+                        <button class="btn-sample" id="btn-sample">Try a sample free</button>
+                    </div>
+                    <div class="sample-books" id="sample-books-container">
+                        <!-- rendered by app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter" id="newsletter">
+            <div class="section-container">
+                <div class="newsletter-content">
+                    <h2>📬 Never Miss a Drop</h2>
+                    <p>Get notified when new books launch. No spam, just pages.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="your@email.com" id="newsletter-email">
+                        <button class="btn-subscribe" id="btn-subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ===== BOOK DETAIL VIEW ===== -->
+    <div id="book-view" style="display:none;"></div>
+
+    <!-- ===== SUPPORT PAGES VIEW ===== -->
+    <div id="page-view" style="display:none;"></div>
+
+    <!-- Footer -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">Feluffy</a>
+                <p class="footer-tagline">Playful books you don't just read — you interact with.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#about">About Feluffy</a>
+                <a href="#contact">Contact</a>
+                <a href="#faq">FAQ</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://x.com" target="_blank" rel="noopener" class="social-icon" id="social-x"
+                        title="X (Twitter)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-icon"
+                        id="social-pinterest" title="Pinterest">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0a12 12 0 0 0-4.37 23.17c-.1-.94-.2-2.4.04-3.44l1.43-6.07s-.36-.73-.36-1.81c0-1.7.98-2.96 2.2-2.96 1.04 0 1.54.78 1.54 1.72 0 1.04-.67 2.6-1.01 4.05-.29 1.2.6 2.19 1.79 2.19 2.14 0 3.79-2.26 3.79-5.52 0-2.88-2.07-4.9-5.04-4.9-3.43 0-5.45 2.58-5.45 5.24 0 1.04.4 2.15.9 2.75a.36.36 0 0 1 .08.35l-.34 1.36c-.05.22-.17.27-.4.16-1.5-.7-2.43-2.9-2.43-4.67 0-3.81 2.77-7.3 7.98-7.3 4.19 0 7.44 2.99 7.44 6.98 0 4.16-2.63 7.52-6.28 7.52-1.23 0-2.38-.64-2.77-1.39l-.75 2.88c-.27 1.04-1 2.35-1.49 3.15A12 12 0 1 0 12 0z" />
+                        </svg>
+                    </a>
+                    <a href="https://ko-fi.com" target="_blank" rel="noopener" class="social-icon" id="social-kofi"
+                        title="Ko-fi">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23.88 8.4c-.04-.62-.2-1.2-.46-1.74-.56-1.18-1.5-1.88-2.72-2.22-.6-.18-1.22-.2-1.84-.16-.22.02-.43.04-.65.08h-.48c-.07-.02-.2-.04-.3-.07H6.16c-.14 0-.28.02-.42.05-1.08.14-1.9.7-2.46 1.62-.38.63-.56 1.33-.6 2.07-.03.57.03 1.14.1 1.7.2 1.48.68 2.86 1.42 4.14.58 1 1.32 1.86 2.22 2.58.56.45 1.17.8 1.84 1.06.3.12.6.2.92.25l.18.03h5.1c.2-.03.4-.05.58-.1 1.16-.27 2.04-.94 2.68-1.96.23-.37.42-.76.57-1.17l.03-.07c.24.02.46.05.7.05.56 0 1.1-.12 1.62-.36 1.06-.5 1.72-1.32 2-2.46.16-.65.2-1.3.12-1.97z" />
+                        </svg>
+                    </a>
+                    <a href="https://amazon.com" target="_blank" rel="noopener" class="social-icon" id="social-amazon"
+                        title="Amazon Author Page">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M.045 18.02c.07-.116.36-.172.53-.127.19.05.37.116.55.2.52.25 1.01.49 1.55.68a14.6 14.6 0 004.65 1.13c3.15.28 6.15-.46 8.95-2.08.12-.07.25-.15.38-.2.17-.07.3.02.33.2.03.15-.02.3-.13.42-.7.75-1.55 1.35-2.47 1.84a14.4 14.4 0 01-8.3 1.65c-1.7-.2-3.33-.67-4.85-1.42-.38-.18-.73-.4-1.08-.62-.1-.06-.17-.13-.14-.23z" />
+                            <path
+                                d="M6.09 16.5c.13-.2.34-.18.52-.1.64.3 1.3.53 2 .7 2.18.53 4.3.4 6.35-.47.22-.1.42-.22.64-.3.2-.07.34.04.3.26-.03.12-.1.24-.2.33a8.86 8.86 0 01-4.43 2.14c-1.46.2-2.87.05-4.22-.53-.3-.13-.58-.3-.85-.48-.07-.05-.14-.12-.1-.23l-.01.68z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Feluffy. All rights reserved. Made with ☕ and imagination.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
